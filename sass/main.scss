@@ -1,0 +1,50 @@
+@import "./mixin";
+@import "./variables";
+@import "./buttons";
+@import "./container";
+@import "./item";
+@import "./mobile";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+ul {
+  padding-inline-start: 35px;
+  @include respond(phone){
+      padding-inline-start: 15px;
+      list-style: none;
+  }
+}
+
+html {
+  font-size: 62.5%; //1rem = 10px; 10px/16px = 62.5%
+
+  @include respond(small-phone){
+      font-size: 25%;
+  }
+
+  @include respond(phone){
+      font-size: 37.5%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-land) {
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

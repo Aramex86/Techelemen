@@ -1,0 +1,64 @@
+.btn {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: $main-btn;
+  background: none;
+
+  &-buy {
+    background-color: lightgrey;
+    margin-top: $margin-top;
+    height: 35px;
+    @include respond(tab-port) {
+      margin-top: 5px;
+    }
+    &:hover {
+      background: #33a544a3;
+      color: #fff;
+    }
+  }
+  &-mobile {
+    margin-left: 5px;
+    display: none;
+    @include respond(phone) {
+      display: inline-block;
+    }
+    & span {
+      width: 15px;
+      height: 1px;
+      background: #33a544a3;
+      display: inline-block;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -4px;
+        width: 15px;
+        height: 1px;
+        display: inline-block;
+        background: #33a544a3;
+        left: 3px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 4px;
+        width: 15px;
+        height: 1px;
+        display: inline-block;
+        background: #33a544a3;
+        left: 3px;
+      }
+    }
+  }
+  &-closemobilemenu{
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    color:$main-color;
+    font-size: 2.5rem;
+    
+   
+  }
+}

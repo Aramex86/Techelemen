@@ -1,0 +1,15 @@
+.container {
+  outline: 1px solid black;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  overflow: hidden;
+  @include respond(small-phone){
+    width: 95%;
+    position: relative;
+  }
+}
