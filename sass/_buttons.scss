@@ -6,7 +6,7 @@
   color: $main-btn;
   background: none;
 
-  &-buy {
+  &--buy {
     background-color: lightgrey;
     margin-top: $margin-top;
     height: 35px;
@@ -18,24 +18,24 @@
       color: #fff;
     }
   }
-  &-mobile {
-    margin-left: 5px;
+  &--mobile {
+    margin-left: 13px;
     display: none;
     @include respond(phone) {
       display: inline-block;
     }
     & span {
       width: 15px;
-      height: 1px;
+      height: 1.5px;
       background: #33a544a3;
       display: inline-block;
       position: relative;
       &::before {
         content: "";
         position: absolute;
-        top: -4px;
+        top: -5px;
         width: 15px;
-        height: 1px;
+        height: 1.5px;
         display: inline-block;
         background: #33a544a3;
         left: 3px;
@@ -43,22 +43,41 @@
       &::after {
         content: "";
         position: absolute;
-        top: 4px;
+        top: 5px;
         width: 15px;
-        height: 1px;
+        height: 1.5px;
         display: inline-block;
         background: #33a544a3;
         left: 3px;
       }
     }
   }
-  &-closemobilemenu{
+  &--closemobilemenu{
     position: absolute;
     top: 14px;
     right: 15px;
     color:$main-color;
     font-size: 2.5rem;
-    
-   
+  }
+  &--ready{
+    background-color: lightgrey;
+    margin-top: 15px;
+    height: 25px;
+    width: 48px;
+    margin: auto;
+    margin-bottom: 3px;
+    @include respond(tab-port) {
+      margin-top: 5px;
+    }
+    &:hover {
+      background: #33a544a3;
+      color: #fff;
+    }
+  }
+  &--closemodal{
+    position: absolute;
+    top: 2px;
+    right: 6px;
+    font-size: 1.7rem;
   }
 }

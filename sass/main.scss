@@ -4,6 +4,7 @@
 @import "./container";
 @import "./item";
 @import "./mobile";
+@import "./changeModal";
 
 *,
 *::after,
@@ -20,6 +21,10 @@ ul {
   }
 }
 
+body {
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 html {
   font-size: 62.5%; //1rem = 10px; 10px/16px = 62.5%
 
@@ -44,7 +49,3 @@ html {
   }
 }
 
-body {
-  font-size: 1.5rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}

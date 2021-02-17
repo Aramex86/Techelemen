@@ -22,62 +22,85 @@ $breakpoint argument choises:
   color: #8a8a8a;
   background: none;
 }
-.btn-buy {
+.btn--buy {
   background-color: lightgrey;
   margin-top: 15px;
   height: 35px;
 }
 @media only screen and (max-width: 56.25em) {
-  .btn-buy {
+  .btn--buy {
     margin-top: 5px;
   }
 }
-.btn-buy:hover {
+.btn--buy:hover {
   background: #33a544a3;
   color: #fff;
 }
-.btn-mobile {
-  margin-left: 5px;
+.btn--mobile {
+  margin-left: 13px;
   display: none;
 }
 @media only screen and (max-width: 37.5em) {
-  .btn-mobile {
+  .btn--mobile {
     display: inline-block;
   }
 }
-.btn-mobile span {
+.btn--mobile span {
   width: 15px;
-  height: 1px;
+  height: 1.5px;
   background: #33a544a3;
   display: inline-block;
   position: relative;
 }
-.btn-mobile span::before {
+.btn--mobile span::before {
   content: "";
   position: absolute;
-  top: -4px;
+  top: -5px;
   width: 15px;
-  height: 1px;
+  height: 1.5px;
   display: inline-block;
   background: #33a544a3;
   left: 3px;
 }
-.btn-mobile span::after {
+.btn--mobile span::after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: 5px;
   width: 15px;
-  height: 1px;
+  height: 1.5px;
   display: inline-block;
   background: #33a544a3;
   left: 3px;
 }
-.btn-closemobilemenu {
+.btn--closemobilemenu {
   position: absolute;
   top: 14px;
   right: 15px;
   color: #fff;
   font-size: 2.5rem;
+}
+.btn--ready {
+  background-color: lightgrey;
+  margin-top: 15px;
+  height: 25px;
+  width: 48px;
+  margin: auto;
+  margin-bottom: 3px;
+}
+@media only screen and (max-width: 56.25em) {
+  .btn--ready {
+    margin-top: 5px;
+  }
+}
+.btn--ready:hover {
+  background: #33a544a3;
+  color: #fff;
+}
+.btn--closemodal {
+  position: absolute;
+  top: 2px;
+  right: 6px;
+  font-size: 1.7rem;
 }
 
 .container {
@@ -88,7 +111,6 @@ $breakpoint argument choises:
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
-  margin-top: 50px;
   overflow: hidden;
 }
 @media only screen and (max-width: 25em) {
@@ -190,7 +212,6 @@ $breakpoint argument choises:
   }
 }
 .main__itemwrapp-item:hover {
-  transform: scale(1.03);
   box-shadow: 0px 1px 5px 0px #80808070;
 }
 .main__itemwrapp-item-img {
@@ -216,11 +237,22 @@ $breakpoint argument choises:
 .main__itemwrapp-item-desc {
   width: calc(100% - 30%);
   margin-top: 15px;
+  position: relative;
 }
 @media only screen and (max-width: 56.25em) {
   .main__itemwrapp-item-desc {
     margin-top: 0;
   }
+}
+.main__itemwrapp-item-desc-name {
+  display: flex;
+  justify-content: space-between;
+}
+.main__itemwrapp-item-desc-name img {
+  display: none;
+}
+.main__itemwrapp-item-desc-name:hover img {
+  display: block;
 }
 .main__itemwrapp-item-desc-featurelist {
   list-style: none;
@@ -340,6 +372,30 @@ $breakpoint argument choises:
   font-size: 1.6rem;
 }
 
+.changes__modal {
+  position: absolute;
+  border: 1px solid gray;
+  width: 100%;
+  height: 102px;
+  background: #fff;
+  flex-direction: column;
+  top: 0;
+  padding: 0 0.5rem;
+  display: none;
+  top: -20px;
+  left: -4px;
+}
+
+.changes__modal input {
+  margin-top: 25px;
+  outline: transparent;
+  height: 25px;
+  padding: 0 0.5rem;
+}
+.changes__modal input::placeholder {
+  color: rgba(128, 128, 128, 0.72);
+}
+
 *,
 *::after,
 *::before {
@@ -356,6 +412,11 @@ ul {
     padding-inline-start: 15px;
     list-style: none;
   }
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 html {
@@ -385,9 +446,4 @@ html {
   html {
     font-size: 75%;
   }
-}
-
-body {
-  font-size: 1.5rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }/*# sourceMappingURL=main.css.map */

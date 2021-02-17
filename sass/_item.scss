@@ -61,7 +61,6 @@
       padding: 1rem 0;
       cursor: pointer;
       transition: all 0.2s ease;
-
       @include respond(tab-land) {
         width: 22%;
       }
@@ -72,7 +71,6 @@
         width: 48%;
       }
       &:hover {
-        transform: scale(1.03);
         box-shadow: 0px 1px 5px 0px #80808070;
       }
       &-img {
@@ -94,11 +92,22 @@
       &-desc {
         width: calc(#{$item-descWidth} - 30%);
         margin-top: $margin-top;
+        position: relative;
         @include respond(tab-port) {
           margin-top: 0;
         }
-        // &-name {
-        // }
+        &-name {
+          display: flex;
+          justify-content: space-between;
+          & img {
+            display: none;
+          }
+          &:hover {
+            & img {
+              display: block;
+            }
+          }
+        }
         &-featurelist {
           list-style: none;
           padding-inline-start: 0;
