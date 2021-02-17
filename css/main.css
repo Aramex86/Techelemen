@@ -204,12 +204,13 @@ $breakpoint argument choises:
 }
 @media only screen and (max-width: 37.5em) {
   .main__itemwrapp-item {
-    width: 30%;
+    width: 43%;
   }
 }
 @media only screen and (max-width: 25em) {
   .main__itemwrapp-item {
     width: 48%;
+    font-size: 1.4rem;
   }
 }
 .main__itemwrapp-item:hover {
@@ -257,6 +258,8 @@ $breakpoint argument choises:
 }
 .main__itemwrapp-item-desc-name:hover img {
   display: block;
+  width: 15px;
+  height: 15px;
 }
 .main__itemwrapp-item-desc-featurelist {
   list-style: none;
