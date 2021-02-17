@@ -49,6 +49,7 @@
     @include respond(small-phone) {
       margin-top: 30px;
     }
+
     &-item {
       width: 20%;
       display: flex;
@@ -59,8 +60,9 @@
       border: 1px solid #80808038;
       border-radius: 3px;
       padding: 1rem 0;
-      cursor: pointer;
+      cursor: move;
       transition: all 0.2s ease;
+
       @include respond(tab-land) {
         width: 22%;
       }
@@ -175,3 +177,5 @@
 .level4__list-item-link {
   color: #0331bb;
 }
+
+

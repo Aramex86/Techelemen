@@ -193,7 +193,7 @@ $breakpoint argument choises:
   border: 1px solid #80808038;
   border-radius: 3px;
   padding: 1rem 0;
-  cursor: pointer;
+  cursor: move;
   transition: all 0.2s ease;
 }
 @media only screen and (max-width: 75em) {
