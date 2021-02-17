@@ -105,6 +105,7 @@
             display: none;
           }
           &:hover {
+            cursor: pointer;
             & img {
               display: block;
             }

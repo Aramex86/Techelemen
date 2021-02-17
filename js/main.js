@@ -49,11 +49,12 @@ function itemObj(id, name) {
   this.id = id;
   this.name = name;
 }
-
 const changeName = () => {
   for (let i = 0; i < modalWindow.length; i++) {
     readyBtn[i].addEventListener("click", () => {
-      itemName[i].innerHTML = `${modalInput[i].value} <img src="./assets/edit.svg" alt="edit" class="edit">`;
+      itemName[
+        i
+      ].innerHTML = `${modalInput[i].value}`;
       modalWindow[i].style.display = "none";
       const obj = new itemObj(
         Math.trunc(Math.random() * 12),
@@ -72,7 +73,7 @@ function handleDragStart(e) {
   dragSrcEl = this;
   e.dataTransfer.effectAllowed = "move";
   e.dataTransfer.setData("text/html", this.innerHTML);
-  console.log("start");
+  changeName();
 }
 
 function handleDragOver(e) {
