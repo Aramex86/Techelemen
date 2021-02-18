@@ -93,11 +93,14 @@
         }
       }
       &-desc {
-        width: calc(#{$item-descWidth} - 30%);
+        width: calc(#{$item-descWidth} - 15%);
         margin-top: $margin-top;
         position: relative;
         @include respond(tab-port) {
           margin-top: 0;
+        }
+        @include respond(phone) {
+          width: calc(#{$item-descWidth} - 22%);
         }
         &-name {
           display: flex;
@@ -181,5 +184,3 @@
 .level4__list-item-link {
   color: #0331bb;
 }
-
-
